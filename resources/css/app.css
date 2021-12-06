@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+thead th {
+  @apply text-mischka text-left font-medium text-sm leading-6 p-4;
+}
+
+table td {
+  @apply text-midnight-express font-medium text-sm leading-6 p-4
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  @apply bg-ghost-white
+}
+
+.form-group {
+  @apply flex items-center mb-3
+}
+
+.form-control {
+  @apply border-solid border-2 border-black rounded-lg h-10 px-3 outline-none w-full;
+}
+

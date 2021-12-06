@@ -1,0 +1,39 @@
+$ghost-white: #f5f6fa;
+$navy-blue: #0054fe;
+$storm-grey: #74798c;
+$white: #ffffff;
+
+$colors: (
+  'ghost-white': $ghost-white,
+  'navy-blue': $navy-blue,
+  'storm-grey': $storm-grey,
+  'white': $white
+);
+
+@each $name, $color in $colors {
+  .bg-#{$name} {
+    background-color: $color;
+  }
+
+  .btn-#{$name} {
+    background-color: $color;
+
+    &:hover {
+      background-color: darken($color, 10%);
+    }
+  }
+
+  .text-#{$name} {
+    color: $color;
+  }
+}
+
+button.btn,
+a.btn {
+  border-radius: 8px;
+  border: none;
+  height: 48px;
+  padding: 1rem;
+  width: 200px;
+  cursor: pointer;
+}
